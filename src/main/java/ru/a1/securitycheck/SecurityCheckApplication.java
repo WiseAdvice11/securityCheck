@@ -30,15 +30,15 @@ public class SecurityCheckApplication {
     CommandLineRunner run(UserService userService) {
 
         return args -> {
-            userService.saveUser(new User("Sara","O'Connor","123",new ArrayList<>()));
-            userService.saveUser(new User("Jim","Worm","123",   new ArrayList<>()));
-            userService.saveUser(new User("Sam","Serious","123",new ArrayList<>()));
-            userService.saveUser(new User("John","Week","123",  new ArrayList<>()));
+            userService.saveUser(new User(null,"Sara","O'Connor","123",new ArrayList<>()));
+            userService.saveUser(new User(null,"Jim","Worm","123",   new ArrayList<>()));
+            userService.saveUser(new User(null,"Sam","Serious","123",new ArrayList<>()));
+            userService.saveUser(new User(null,"John","Week","123",  new ArrayList<>()));
 
-            userService.saveRole(new Role("ROLE_USER"));
-            userService.saveRole(new Role("ROLE_ADMIN"));
-            userService.saveRole(new Role("ROLE_MANAGER"));
-            userService.saveRole(new Role("ROLE_SUPER_ADMIN"));
+            userService.saveRole(new Role(null,"ROLE_USER"));
+            userService.saveRole(new Role(null,"ROLE_ADMIN"));
+            userService.saveRole(new Role(null,"ROLE_MANAGER"));
+            userService.saveRole(new Role(null,"ROLE_SUPER_ADMIN"));
 
             userService.addRoleToUser("O'Connor","ROLE_USER");
             userService.addRoleToUser("Serious","ROLE_SUPER_ADMIN");

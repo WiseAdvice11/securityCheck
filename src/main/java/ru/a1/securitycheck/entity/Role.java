@@ -14,7 +14,9 @@ import javax.persistence.Id;
 @AllArgsConstructor
 
 
-public class Role extends BaseEntity<Long> {
-
+public class Role {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+   private Long id;
    private String name;
 }
